@@ -1,0 +1,12 @@
+.page {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 1280px;
+	min-width:320px;
+	margin: 0 auto;
+	background: #2A2C2F;
+	color: #fff;
+	font-family: 'Inter', Arial, sans-serif;
+	line-height: 1;
+
+}

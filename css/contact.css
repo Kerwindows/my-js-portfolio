@@ -1,0 +1,97 @@
+.contact {
+    padding: var(--padding-lg) var(--padding-md);
+    background-color: #eee;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.contact__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__title {
+    font-size: 2rem;
+    margin-bottom: var(--padding-sm);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--padding-lg);
+}
+
+.contact__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: var(--padding-md);
+}
+
+.contact__btn--email,
+.contact__btn--linkedin {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: var(--padding-sm);
+    font-weight: bold;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.contact__btn--linkedin {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.contact__btn--email:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.contact__btn--linkedin:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.contact__icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    right: -8px;
+    fill: currentColor;
+}
+.contact__quick-links {
+    margin-top: 20px;
+}
+.contact__linkedin-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    right: -8px;
+    fill: currentColor;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+}
+@media (max-width: 513px) {
+.contact__title {
+    font-size: 2rem;
+}
+}

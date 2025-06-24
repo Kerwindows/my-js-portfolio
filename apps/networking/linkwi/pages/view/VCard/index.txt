@@ -1,0 +1,1 @@
+https://github.com/jeroendesloovere/vcard/tree/2.0.0-dev

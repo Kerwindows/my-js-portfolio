@@ -1,0 +1,47 @@
+.sidebar-light-black .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #000000;
+    color: #fff;
+}
+
+.bg-facebook {
+    background-color: #0037c1;
+}
+.bg-instagram{
+background-color:#9f44b2;
+}
+.bg-twitter{
+background-color:#1d9bf0;
+
+}
+.bg-linkedin{
+background-color:#0274b3;
+}
+.bg-tiktok{
+background-color:#000;
+}
+.bg-youtube{
+background-color:#ff0000;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: none;
+    padding: .375rem 20px .375rem 20px;
+    border-radius: 6px;
+}
+.btn-primary:hover {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+
+.aside-profileimg{
+
+width: 40px !important; 
+    height: 40px !important;
+    object-fit: cover !important;
+
+}

@@ -1,0 +1,276 @@
+<?php $nav = new Aside; ?>
+<!-- Main Sidebar Container -->
+<aside class="cuc main-sidebar elevation-1 sidebar-light-primary">
+  <!-- Brand Logo -->
+  <a href="/" class="brand-link">
+    <img src="img/files/school-logo.png" alt="Cyversify Checkin Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-dark"><?php echo "{$infouser['Job']}"; ?> Account</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="img/files/school-logo.png" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="index.php?myprofile" class="d-block">
+          <?php echo $infouser['first_name'] . " " . $infouser['last_name']  ?>
+        </a>
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search" data-not-found-text='No results' data-highlight-class='text-yellow' data-min-length='2'>
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="nav-icon fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <?php
+        /* -------------------------------- dashboard ------------------------------- */
+        $nav->asideNav("dashboard", 'Dashboard', 'fas fa-school');
+
+        /* ---------------------------- students dropdown --------------------------- */
+        if ($permission->edit_settings and !$permission->edit_roles) {
+          $dropdown5 = array(
+            array(
+              "population",
+              "Form Classes",
+              "fas fa-user-graduate"
+            ),
+            array(
+              "Attendance",
+              "Student Attendance",
+              "fas fa-users"
+            ),
+            array(
+              "StudentRegistration",
+              "Add Student",
+              "fas fa-user-alt"
+            )
+          );
+          $nav->dropdownLevel1($dropdown5, 'Students', 'fas fa-user-graduate');
+        }
+        if ($permission->edit_settings and $permission->edit_roles) {
+          $dropdown5 = array(
+            array(
+              "population",
+              "Form Classes",
+              "fas fa-user-graduate"
+            ),
+            array(
+              "Attendance",
+              "Student Attendance",
+              "fas fa-users"
+            ),
+            array(
+              "StudentRegistration",
+              "Add Student",
+              "fas fa-user-alt"
+            ),
+            array(
+              "student-management",
+              "Edit Students",
+              "fas fa-users"
+            )
+          );
+          $nav->dropdownLevel1($dropdown5, 'Students', 'fas fa-user-graduate');
+        }
+
+        /* ---------------------------- parents dropdown --------------------------- */
+        if ($permission->edit_settings and !$permission->edit_roles) {
+          $dropdown6 = array(
+            array(
+              "viewparents",
+              "View Parents",
+              "fas fa-user-friends"
+            ),
+            array(
+              "ParentRegistration",
+              "Add Parent",
+              "fas fa-user-alt"
+            )
+          );
+          $nav->dropdownLevel1($dropdown6, 'Parents', 'fas fa-user-graduate');
+        }
+
+        if ($permission->edit_settings and $permission->edit_roles) {
+          $dropdown6 = array(
+            array(
+              "viewparents",
+              "View Parents",
+              "fas fa-user-friends"
+            ),
+            array(
+              "ParentRegistration",
+              "Add Parent",
+              "fas fa-user-alt"
+            ),
+            array(
+              "parent-management",
+              "Edit Parents",
+              "fas fa-users"
+            )
+          );
+          $nav->dropdownLevel1($dropdown6, 'Parents', 'fas fa-user-graduate');
+        }
+        /* ---------------------------- staff dropdown --------------------------- */
+        if ($permission->edit_settings and !$permission->edit_roles) {
+          $dropdown4 = array(
+            array(
+              "viewteachers",
+              "View Staff",
+              "fas fa-chalkboard-teacher"
+            ),
+            array(
+              "humanresource&year=" . date("Y"),
+              "Human Resource",
+              "fas fa-users"
+            ),
+            array(
+              "Registration",
+              "Add Staff",
+              "fas fa-users"
+            ),
+            array(
+              "staff-history",
+              "Staff History",
+              "fas fa-chalkboard-teacher"
+            )
+          );
+          $nav->dropdownLevel1($dropdown4, 'Staff', 'fas fa-users');
+        }
+        if ($permission->edit_settings and $permission->edit_roles) {
+          $dropdown4 = array(
+            array(
+              "viewteachers",
+              "View Staff",
+              "fas fa-chalkboard-teacher"
+            ),
+            array(
+              "staff-attendance",
+              "View Attendance",
+              "fas fa-chalkboard-teacher"
+            ),
+            array(
+              "staff-history",
+              "Staff History",
+              "fas fa-chalkboard-teacher"
+            ),
+            array(
+              "humanresource&year=" . date("Y"),
+              "Human Resource",
+              "fas fa-users"
+            ),
+            array(
+              "Registration",
+              "Add Staff",
+              "fas fa-users"
+            ),
+            array(
+              "staff-management",
+              "Edit Staff",
+              "fas fa-users"
+            )
+          );
+          $nav->dropdownLevel1($dropdown4, 'Staff', 'fas fa-users');
+        }
+
+        /* ---------------------------- visitors dropdown --------------------------- */
+        $dropdown1 = array(
+          array(
+            "Visitors",
+            "Onsite",
+            "fas fa-user-alt"
+          ),
+          array(
+            "Visitors-History",
+            "History",
+            "fas fa-user-alt"
+          )
+        );
+        $nav->dropdownLevel1($dropdown1, 'Visitors', 'fas fa-users');
+
+        /* ---------------------------- search --------------------------- */
+        $nav->asideNav("search", 'Search', 'fas fa-binoculars');
+
+        /* ---------------------------- settings dropdown --------------------------- */
+        if ($permission->edit_settings and $permission->edit_roles) {
+
+          //dropdown3 start,this could be any value
+          $dropdown3 = array(
+            
+            array(
+              "set-categories",
+              "Categories",
+              "fas fa-user-alt"
+            ),
+            array(
+              "set-roles",
+              "Roles",
+              "fas fa-user-alt"
+            ),
+            array(
+              "site-settings",
+              "Site Settings",
+              "fas fa-user-alt"
+            )
+          );
+          $nav->dropdownLevel1($dropdown3, 'Settings', 'fa fa-cog');
+        }
+
+        if ($permission->edit_settings and !$permission->edit_roles) {
+
+          $dropdown3 = array(
+            array(
+              "set-year",
+              "School Year",
+              "fa fa-cog"
+            ),
+            array(
+              "set-categories",
+              "Categories",
+              "fas fa-user-alt"
+            )
+          );
+          $nav->dropdownLevel1($dropdown3, 'Settings', 'fa fa-cog');
+        }
+        /* ---------------------------- logout --------------------------- */
+        if ($infouser['Role'] == "superadmin") { ?>
+          <li class="nav-item">
+            <a href="logout.admin.php" class='nav-link'>
+              <i class="nav-icon far fa-clock"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+        <?php } else { ?>
+          <li class="nav-item">
+            <a href="logout.php" class='nav-link'>
+              <i class="nav-icon far fa-clock"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        <?php }  ?>
+
+
+
+
+      </ul>
+
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

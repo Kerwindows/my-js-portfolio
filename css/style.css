@@ -1,0 +1,17 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Custom CSS Imports */
+@import 'base.css';
+@import 'variables.css';
+@import 'page.css';
+@import 'navbar.css';
+@import 'hero.css';
+@import 'skills.css';
+@import 'about.css';
+@import 'portfolio.css';
+@import 'contact.css';
+@import 'cta.css';
+@import 'modal.css';
+@import 'float.css';
+@import 'email.css';

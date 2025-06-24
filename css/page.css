@@ -1,0 +1,54 @@
+.page{
+background: -o-linear-gradient(315deg, #f4f7fc 25%, #fff 100%);
+background: linear-gradient(135deg, #f4f7fc 25%, #fff 100%);
+}
+.page__top-section{
+background: url('https://fs.kerwindows.com/img/hero-background.webp') no-repeat center center/cover;
+/*background: url(https://fs.kerwindows.com/img/hero-background.webp) no-repeat center center / cover fixed;*/
+
+}
+
+.page__top-section {
+    position: relative;
+    padding:20px 2.5% 0 2.5%;
+    /*background-color: #f9f9f9;*/ /* Background color of the top section */
+    overflow: hidden; /* Prevent shapes from overflowing */
+    min-height: 680px;
+}
+
+.page__top-section::before,
+.page__top-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1; /* Keep shapes behind the content */
+}
+
+.page__top-section::before {
+    width: 450px;
+    height: 450px;
+    background: #ff6347a1;
+    top: -150px;
+    left: -150px;
+    -webkit-filter: blur(60px);
+            filter: blur(60px);
+}
+
+.page__top-section::after {
+    width: 400px;
+    height: 400px;
+    /*background: rgba(60, 179, 113, 0.5);*/ /* Soft green */
+    background:#006fd142;
+    bottom: 200px;
+    right: 200px;
+    -webkit-filter: blur(80px);
+            filter: blur(80px);
+}
+
+/* Content within the page__top-section remains on top */
+.page__top-section .hero__content,
+.page__top-section .hero__image,
+.page__top-section .navbar {
+    position: relative;
+    z-index: 2;
+}

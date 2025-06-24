@@ -1,0 +1,82 @@
+.row.promo__section{
+
+-webkit-box-align: center;
+
+    -ms-flex-align: center;
+
+        align-items: center;
+
+}
+
+.banner-image-1 {
+    margin: 0;
+    width:100%;
+}
+.call-action-2-image-2 {
+    width: 100%;
+}
+.call-action-3-image-1 {
+    width: 88%;
+    
+}
+.home-section{
+background-color:#1b1b1b;
+background-position: right;
+transition:0.3s;
+}
+@media only screen and (max-width: 630px) {
+.home-section {
+    background-position: -658px;
+}
+}
+@media only screen and (max-width: 530px) {
+.home-section {
+    background-position: 90%;
+}
+}
+@media only screen and (min-width: 991px) {
+.home-content {
+    text-align: left;
+}
+}
+.paper-card-container{
+padding-left:0;
+}
+
+@media only screen and (max-width: 991px) {
+.call-action-3-image-1 {
+    margin: 80px auto 0;
+    width: 100%;
+}
+}
+
+/*----nav menu ----*/
+.inner-nav ul li a {
+    color: #fff;
+}
+.inner-nav ul li a:hover, .inner-nav ul li a.active {
+color: #ff3b6c;
+}
+/*----nav menu from balck to white when scrolling---*/
+.mobile-nav {
+    color: #fff;
+}
+.mobile-nav.small-height {
+    color: #000;
+}
+a.logo {
+    color: #fff;
+}
+a.logo.small-height {
+    color: #000;
+}
+.works-grid.hover-white .work-item:hover .work-intro, .works-grid.hover-white .work-item:hover .work-title, .works-grid.hover-white .work-item:hover .work-descr {
+    color: #fff;
+}
+.works-grid.hover-white .work-item:hover .work-img:after  {
+    background: rgb(27 27 27 / 59%);
+}
+
+.bg-dark-alfa-70:before, .bg-dark-alfa-70 .YTPOverlay:before {
+    background: linear-gradient(to top, transparent,#00000078);
+    }

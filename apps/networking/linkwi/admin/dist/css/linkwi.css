@@ -1,0 +1,76 @@
+.sidebar-light-black .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #000000;
+    color: #fff;
+}
+
+.bg-facebook {
+    background-color: #3b5998;
+}
+.bg-instagram{
+background-color:#df1b89;
+}
+.bg-twitter{
+background-color:#03a9f4;
+
+}
+.bg-linkedin{
+background-color:#0274b3;
+}
+.bg-tiktok{
+background-color:#000;
+}
+.bg-youtube{
+background-color:#d42428;
+}
+.bg-whatsapp{
+background-color:#29a71a;
+}
+.bg-twitch{
+background-color:#6340a5;
+}
+.bg-snapchat{
+background-color:#ffd633;
+}
+.bg-telegram{
+background-color:#039be5;
+}
+.bg-discord{
+background-color:#5c6bc0;
+}
+.bg-pinterest{
+background-color:#cb2027;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: none;
+    padding: .375rem 20px .375rem 20px;
+    border-radius: 6px;
+}
+.btn-primary:hover {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+
+.aside-profileimg{
+
+width: 40px !important; 
+    height: 40px !important;
+    object-fit: cover !important;
+
+}
+/*------backend forms-----*/
+.form-control {
+    border: 1px solid #ffffff00;
+    border-bottom: 1px solid #9e9e9e;
+}
+.info-box,.card {
+    box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%);
+    border-radius: 0.85rem;
+}
+.elevation-1 {
+    box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%) !important;
+}

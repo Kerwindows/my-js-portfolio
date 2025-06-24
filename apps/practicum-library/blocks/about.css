@@ -1,0 +1,120 @@
+@-webkit-keyframes pulsate{
+  0%{ 
+   -webkit-transform:  scale(1);
+           transform:  scale(1);
+    opacity:1;
+
+  }
+  50%{
+    opacity:0.6;
+  }
+  100%{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity:0;
+  }
+}
+@keyframes pulsate{
+  0%{ 
+   -webkit-transform:  scale(1);
+           transform:  scale(1);
+    opacity:1;
+
+  }
+  50%{
+    opacity:0.6;
+  }
+  100%{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity:0;
+  }
+}
+.about {
+	background-color: #0a2750;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.about__title {
+	max-width: 260px;
+	margin: 100px 0 0 80px;
+	z-index: 1;
+	font-family: 'Inter', Arial, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 44px;
+	line-height: 52px;
+}
+
+.about__span-line-break {
+	display: block;
+}
+
+.about__content {
+	max-width: 660px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	gap: 20px;
+	z-index: 1;
+	margin: 119px 80px 173px 0;
+	font-family: 'Noto Serif', 'Times New Roman', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.about__paragraph {
+	margin: 0;
+}
+
+.about__circle {
+	background-color: #2f80ed;
+	width: 426px;
+	height: 426px;
+	border-radius: 50%;
+	position: absolute;
+	top: -129px;
+	left: -152px;
+	z-index: 0;
+}
+.about__circle_animation_blurred{
+-webkit-animation: pulsate 1.3s ease-in-out infinite;
+        animation: pulsate 1.3s ease-in-out infinite;
+}
+
+@media (max-width:1040px) {
+.about{
+flex-direction: column;
+}
+.about__content{
+    margin-left: 80px;
+}
+.footer__contents {
+    flex-direction: column;
+}
+}
+
+@media (max-width:564px){
+    .about__title {
+    margin: 100px 32px 0 32px;
+    }
+    .about__content {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}

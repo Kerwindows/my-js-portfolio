@@ -1,0 +1,106 @@
+.modal {
+    display: none; /* Hidden by default */
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+    position: relative;
+    max-width: 600px;
+    margin: 10% auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal__details {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    max-height: 69vh;
+}
+.modal__close {
+    position: absolute;
+    top: -18px;
+    right: -8px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal__image {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal__description {
+    font-size: 16px;
+
+}
+.modal__detail {
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+.modal__link {
+    text-decoration: none;
+}
+
+/* Style for the collapsed state */
+.modal__detail.collapsed {
+    max-height: 50px; /* Adjust based on how much you want to show initially */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Style for the expanded state */
+.modal__detail.expanded {
+    max-height: none; /* Allow full content to be displayed */
+}
+
+/* Style for the down arrow toggle */
+.modal__toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+/* Change the icon when expanded */
+.modal__toggle.expanded::after {
+    content: "\25B2"; /* Upward arrow */
+    display: inline-block;
+    margin-left: 5px;
+}
+svg.feather.feather-chevron-down, svg.feather.feather-chevron-up {
+    outline: 1px solid #9f9f9f;
+    border-radius: 50px;
+}

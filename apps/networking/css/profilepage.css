@@ -1,0 +1,276 @@
+.parallax-header__content {
+    padding: 110px 0 200px 0;
+}
+.bg-decor{
+top:340px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin: 0px 0px 5px 0px;
+}
+h1 {
+    font-size: 46px;
+}
+h2 {
+    font-size: 26px;
+}
+p {
+    margin: 0px;
+    font-size: 1.4rem;
+    
+}
+
+.section-lg{
+padding-top:0;
+}
+
+/*style for scroll bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightgrey; 
+}
+
+aside.profile-card {
+    z-index: 1;
+}
+
+
+.profile-card header h1 {
+    color: #FF5722;
+}
+.profile-card header a {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 25px 30px;
+    z-index:1;
+}
+.profile-card header a:after {
+	position: absolute;
+    	content: "";
+	bottom: 3px;
+	right: 3px;
+	width: 20px;
+	height: 20px;
+   	 border: 4px solid #FFFFFF;
+    	-webkit-transform: scale(0);
+    	transform: scale(0);
+    	background: -webkit-linear-gradient(top, #2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%);
+    	background: linear-gradient(#2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%);
+    	-webkit-border-radius: 50%;
+    	border-radius: 50%;
+    	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  
+}
+.profile-card header a > div {
+    width: 220px;
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: -webkit-box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    margin-top: -160px;
+    margin-bottom: 40px;
+    background-position: center;
+    
+}
+.profile-card header a:hover > div {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-bio {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+.fa {
+  padding-top: 16px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:50px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+.fa-envelope{
+ background: #ffc108;
+  color: white;
+}
+
+
+#social-bar {
+      
+      width:100%;
+      position:absolute;
+      bottom:0;
+      left:0;
+      line-height:50px;
+      font-size:18px;
+      text-align:center;
+      }
+#social-bar a {
+        display:inline-block;
+        line-height:18px;
+        color:#d1638d;
+        text-decoration:none;
+        padding:5px;
+        border-radius:5px;
+        }
+#social-bar a:hover {
+          color:#450300;
+          transition:.25s ease-in-out;
+          }
+          
+.profile-social{
+margin-top:30px 0 20px 0;
+}
+
+
+/**custom future css**/
+.custom-flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.no-data{
+height:100vh;
+}

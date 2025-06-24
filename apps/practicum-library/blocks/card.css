@@ -1,0 +1,38 @@
+.card {
+	max-width: 600px;
+	width: calc(50% - 50px);
+}
+
+.card__title {
+	margin: 0 0 30px;
+	font-family: 'Inter', Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.card__list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 8px;
+	margin-top: 16px;
+	font-family: 'Noto Serif', 'Times New Roman', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.card__list-divider {
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	border-bottom: 1px solid #fff;
+}
+
+@media (max-width:865px) {
+    .card {
+	width: 100%;
+}

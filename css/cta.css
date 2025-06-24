@@ -1,0 +1,94 @@
+.cta__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--padding-sm);
+}
+
+.cta__btn--primary {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--padding-sm) var(--padding-md);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    z-index: 1; /* Ensure the text is above the pseudo-element */
+}
+
+.cta__btn--primary::before {
+    content: '';
+    position: absolute;
+    top: -38px;
+    left: -160%;
+    width: 150%;
+    height: 200%;
+    background-color: var(--primary-color-hover);
+    -webkit-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+    z-index: -1;
+    -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+
+.cta__btn--primary:hover::before {
+    left: -5px; /* Slide the overlay from left to right */
+}
+
+.cta__btn--primary:hover {
+    color: var(--text-light); /* Ensure the text remains visible */
+}
+
+/* Secondary Button */
+.cta__btn--secondary {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: var(--padding-sm) var(--padding-md);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    z-index: 1;
+}
+
+.cta__btn--secondary::before {
+     content: '';
+    position: absolute;
+    top: -38px;
+    left: -158%;
+    width: 150%;
+    height: 200%;
+    background-color: var(--primary-color); /* The color to swipe in */
+    -webkit-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+    z-index: -1;
+    -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+
+.cta__btn--secondary:hover::before {
+    left: -5px;
+}
+
+.cta__btn--secondary:hover {
+    color: var(--text-light); /* Ensure the text color changes when hovered */
+}
+
+@media (max-width: 428px) {
+.cta__buttons {
+   flex-direction: column;
+   align-items: flex-start;
+   }
+}

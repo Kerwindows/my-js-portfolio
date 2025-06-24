@@ -1,0 +1,30 @@
+Options -Indexes
+
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Security Headers
+<IfModule mod_headers.c>
+Header always append X-Frame-Options SAMEORIGIN
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header set X-Content-Type-Options nosniff
+Header set X-Frame-Options DENY
+Header set Referrer-Policy "no-referrer-when-downgrade"
+</IfModule>
+
+# Remove index.php from the URL
+RewriteBase /apps/medfast/
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://fs.kerwindows.com/apps/medfast/$1 [R=301,L]
+
+# If the request is not a file or directory, pass it to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+
+# Deny access to sensitive files
+<Files env.php>
+    Order allow,deny
+    Deny from all
+</Files>

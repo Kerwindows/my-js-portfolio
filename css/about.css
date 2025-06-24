@@ -1,0 +1,101 @@
+.about {
+    /*max-width: var(--main-width);*/
+    padding: var(--padding-lg) var(--padding-sm);
+    margin:0 auto;
+    /*background:var(--warm-beige);*/
+    background: url(https://fs.kerwindows.com/img/hero-background.webp) no-repeat center center / cover fixed;
+}
+
+.about__container {
+    max-width: var(--main-width);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: var(--padding-md);
+}
+
+.about__content {
+    width: 100%;
+}
+
+.about__title {
+    font-size: 2.5rem;
+    margin-bottom: var(--padding-sm);
+    color: var(--text-color);
+}
+
+.about__text {
+    font-size: 1.2rem;
+    color: #667;
+    margin-bottom: var(--padding-sm);
+}
+
+.about__images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: var(--padding-md);
+}
+
+.about__image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 4px 8px var(--shadow-color);
+    -webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.about__image-wrapper:hover {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.about__image {
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+}
+
+@media (max-width: 980px) {
+.about__container{
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+.about__images{
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+}
+}
+
+@media (max-width: 513px) {
+.about__title {
+    font-size: 2rem;
+}
+}

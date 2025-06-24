@@ -1,0 +1,246 @@
+.places {
+	padding: 92px 48px 0;
+	max-width: 987px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 80px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.places__column {
+	margin: 0 auto;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 460px 40px 1fr;
+	grid-template-columns: 460px 1fr;
+	-ms-grid-rows: auto 48px auto 48px 1fr;
+	grid-template-rows: auto auto 1fr;
+	grid-template-areas: "hometown artist"
+    "image description"
+    "button description";
+	row-gap: 48px;
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-gap: 40px;
+}
+
+.places__hometown {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: hometown;
+	margin: 0;
+	font-size: 72px;
+	font-weight: 900;
+	line-height: 1.06;
+	align-self: self-end;
+	
+}
+
+.places__author {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+	grid-area: artist;
+	-ms-grid-row-align: end;
+	align-self: end;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.places__author-title {
+	margin: 0;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #aaa;
+}
+
+.places__author-name {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.22;
+}
+
+.places__image {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	grid-area: image;
+	max-width: 460px;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.places__description {
+	-ms-grid-row: 3;
+	-ms-grid-row-span: 3;
+	-ms-grid-column: 3;
+	grid-area: description;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 25px;
+	font-size: 18px;
+	line-height: 1.63;
+}
+
+.places__description-item {
+	grid-area: description1;
+	margin: 0;
+}
+
+.places__button {
+	-ms-grid-row: 5;
+	-ms-grid-column: 1;
+	grid-area: button;
+	box-sizing: border-box;
+	width: 248px;
+	height: 48px;
+	padding: 15px 20px;
+	background: #0278FE;
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	font-size:18px;
+	font-weight: 600;
+	line-height:1;
+	
+}
+
+@media screen and (max-width: 1054px) {
+	.places {
+		padding: 88px 24px 0;
+	}
+
+	.places__column {
+		-webkit-column-gap: 28px;
+		-moz-column-gap: 28px;
+		column-gap: 28px;
+	}
+}
+
+@media screen and (max-width: 916px) {
+
+	.places__column {
+		-ms-grid-columns: 340px 1fr;
+		grid-template-columns: 340px 1fr;
+	}
+
+	.places__hometown {
+		font-size: 42px;
+		line-height: 1.08;
+	}
+
+	.places__description {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 695px) {
+	.places__column {
+		grid-template-areas: "hometown artist"
+    "image image"
+    "description description"
+    "button . ";
+	}
+
+	.places__image {
+		max-width: 100%;
+		-ms-grid-row: 2;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+	}
+
+	.places__author {
+		-ms-grid-column: 2;
+	}
+
+	.places__description {
+		-ms-grid-row-span: 1;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+	}
+
+	.places__button {
+		-ms-grid-row: 4;
+	}
+}
+
+@media screen and (max-width: 605px) {
+	.places__column {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		-ms-grid-rows: auto 30px auto 30px auto 30px auto 30px auto;
+		grid-template-areas: "hometown"
+    "artist"
+    "image"
+    "description"
+    "button";
+		row-gap: 30px;
+	}
+
+	.places__author {
+		-ms-grid-row: 3;
+		-ms-grid-column: 1;
+	}
+
+	.places__image {
+		-ms-grid-row: 5;
+		-ms-grid-column-span: 1;
+	}
+
+	.places__description {
+		-ms-grid-row: 7;
+		-ms-grid-column-span: 1;
+	}
+
+	.places__button {
+		-ms-grid-row: 9;
+	}
+}
+
+@media screen and (max-width: 540px) {
+   
+	.places {
+		padding: 64px 0 0;
+		gap:48px;
+	}
+	.places__hometown {
+		margin:0 16px;
+		font-size: 32px;
+		line-height: 1.09;
+	}
+	.places__author-title{
+		margin:0 16px;
+	}
+	.places__author-name{
+		margin:0 16px;
+	}
+	.places__description-item{
+		margin:0 16px;
+	}
+	.places__button {
+		width: 288px;
+		margin:0 16px;
+	}
+}

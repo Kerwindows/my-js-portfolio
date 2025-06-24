@@ -1,0 +1,48 @@
+/* Style form and animations */
+#email-form {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    display: block;
+}
+
+#submit-btn.loading {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#status-message {
+    display: none;
+    margin-top: 10px;
+    color: green;
+}
+
+#status-message.sending {
+    color: blue;
+    display: block;
+}
+
+#status-message.success {
+    color: green;
+    display: block;
+}
+
+#status-message.error {
+    color: red;
+    display: block;
+}
+
+
+#loading-animation,
+#success-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#success-video {
+    display: block;
+    margin: 0 auto;
+    width: 80px;  /* Adjust the size as needed */
+    height: 80px;
+}

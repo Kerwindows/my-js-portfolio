@@ -1,0 +1,148 @@
+.portfolio {
+    max-width: var(--main-width);
+    padding: var(--padding-lg) var(--padding-sm);
+    text-align: center;
+    margin: 0 auto;
+    border-radius: var(--border-radius-lg);
+}
+
+.portfolio__header {
+    margin-bottom: var(--padding-lg);
+}
+
+.portfolio__title {
+    font-size: 2.5rem;
+    margin-bottom: var(--padding-sm);
+    color: var(--text-color);
+}
+
+.portfolio__description {
+    font-size: 1.2rem;
+    color: #667;
+    margin-bottom: var(--padding-lg);
+}
+
+.portfolio__filters {
+    margin-bottom: var(--padding-md);
+}
+
+.portfolio__filter {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--padding-sm) var(--padding-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin: 0 10px;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio__filter:hover {
+    background-color: #0056b3;
+}
+
+.portfolio__grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-sm);
+}
+
+.portfolio__item {
+    background-color: var(--text-light);
+    padding: 0 0 var(--padding-sm) 0;
+    border-radius: var(--border-radius-lg);
+    -webkit-box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 4px 8px var(--shadow-color);
+    text-decoration: none;
+    overflow: hidden; /* Ensure image does not overflow on zoom */
+    -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.portfolio__item:hover {
+    -webkit-box-shadow: 0 8px 16px var(--shadow-color);
+            box-shadow: 0 8px 16px var(--shadow-color); /* Add more shadow on hover */
+}
+
+.portfolio__img {
+    width: 100%;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    margin-bottom: var(--padding-sm);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.portfolio__item:hover .portfolio__img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); /* Zoom the image on hover */
+}
+
+.portfolio__project-technology {
+    font-size: 1rem; /* Keep the title smaller */
+    color: var(--text-color);
+}
+
+.portfolio__project-title {
+    font-size: 1.2rem; /* Keep the description larger than the title */
+    color: #667;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.portfilio__icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+/* Shimmer Effect */
+.portfolio__shimmer-wrapper {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-md);
+}
+
+.portfolio__shimmer {
+    background-color: #f6f7f8;
+    background-image: -o-linear-gradient(left, #f6f7f8 0px, #edeef1 40px, #f6f7f8 80px);
+    background-image: linear-gradient(90deg, #f6f7f8 0px, #edeef1 40px, #f6f7f8 80px);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    -webkit-animation: portfolio__shimmer-loading 1.5s infinite;
+            animation: portfolio__shimmer-loading 1.5s infinite;
+    width: 100%;
+    height: 300px;
+    border-radius: var(--border-radius-lg);
+}
+
+@-webkit-keyframes portfolio__shimmer-loading {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@media (max-width: 513px) {
+.portfolio__title {
+    font-size: 2rem;
+}
+}

@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>calendar-icon-svg</title>
+	<defs>
+		<image  width="14" height="8" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAMAAAD+zz7+AAAAAXNSR0IB2cksfwAAAGlQTFRFnaWz9PX2////2NvgrLO/3N/kmKGv8fL00tXcnaSz9vf419rgkpuq9PX32dzhkZqq8PH02dzii5Sl+Pn63eDlipOj3uDliJGi4uXpiJKj+fn65+jsjZam3uHlipSl+/v8fIeZiZKj7e7xL2PyOwAAACN0Uk5T/wAA/////wD//wD//wD//wD//wD/////0P8AgP///wD//yALw+fbAAAATklEQVR4nD3HsQqAIBiF0fsJBUkQhARtvf9rtbgJgWTUkPxYZzsI9AE6uNv6WjdAto1w4DRBqpvJRbUKPEkLRFm1cnrY1arguaL+ais2ve33DyN0ZHT5AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="chevron" href="#img1" x="5" y="8"/>
+</svg>
